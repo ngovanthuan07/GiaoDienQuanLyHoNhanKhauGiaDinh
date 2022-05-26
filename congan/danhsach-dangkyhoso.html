@@ -183,10 +183,20 @@
         </nav>
         <!-- End Header/Navbar -->
         <br />
-            <div class="text-center">
-                <a  class="btn btn-outline-info"><i class="fa-solid fa-file-chart-column"></i>&nbsp; Thêm hồ sơ mới</a>
-                <a class="btn btn-outline-info"><i class="fa-solid fa-address-book"></i>&nbsp; Lọc hồ sơ</a>
-                <a  class="btn btn-outline-info"><i class="fa-solid fa-bullhorn"></i>&nbsp; Báo cáo nhân khẩu</a>
+
+        
+            <div >
+                <div class="d-flex justify-content-end">
+                    <div div class="row" style="margin-right:2%">
+                        <div class="input-group">
+                            <div class="form-outline">
+                                <input id="search-focus" type="search" id="form1" class="form-control" placeholder="Tìm kiếm..."/>
+                            </div>
+                            <button type="button" class="btn btn-primary">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                </div>
             </div>
         <br>
         <!-- content -->
@@ -196,7 +206,7 @@
               class="card-header text-white text-center"
               style="background-color: #009cde"
             >
-              Chi tiết sổ hộ khẩu
+              Chi tiết dăng ký
             </div>
             <div class="card-body">
               <br />
@@ -209,32 +219,64 @@
                       <thead>
                         <tr>
                           <th scope="col">Hồ sơ số</th>
-                          <th scope="col">Hộ khẩu số</th>
-                          <th scope="col">Họ tên chủ</th>
-                          <th scope="col">Nơi thường trú</th>
+                          <th scope="col">Họ tên</th>
+                          <th scope="col">Địa chỉ</th>
                           <th scope="col"></th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <th scope="row">1</th>
-                          <td>1</td>
                           <td>Nguyễn Văn A</td>
                           <td>23/14 Trần Kế Xương, Hải Châu, Đà Nẵng</td>
                           <td class="text-center" >
                             <a href="" class="text-secondary">
                                 <i class="fa-solid fa-eye"></i>
-                                Xem chi tiết
-
                             </a>
                           </td>
                         </tr>
                         <tr>
-
-                       
+                          <th scope="row">2</th>
+                          <td>Nguyễn Văn C</td>
+                          <td>23/14 Trần Kế Xương, Hải Châu, Đà Nẵng</td>
+                          <td class="text-center" >
+                            <a href="" class="text-secondary">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Nguyễn Văn C</td>
+                          <td>23/14 Trần Kế Xương, Hải Châu, Đà Nẵng</td>
+                          <td class="text-center" >
+                            <a href="" class="text-secondary">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>Nguyễn Văn D</td>
+                          <td>23/14 Trần Kế Xương, Hải Châu, Đà Nẵng</td>
+                          <td class="text-center" >
+                            <a href="" class="text-secondary">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                          </td>
+                        </tr>
 
                       </tbody>
                     </table>
+
+
+                    <div class="float-right">
+                        <div class="row">
+                            <div class="col text-center">
+                                <a type='submit' class="btn"  style="background-color:#009cde; color:white"><i class="fa-solid fa-backward"></i>&nbsp; Về trang chủ</a>
+                            </div>
+                        </div>
+                    </div>
 
                   </div>
                 </div>
@@ -302,8 +344,7 @@
         }
       }
 
-      CKEDITOR.replace("tomTatBanThan");
-      CKEDITOR.replace("tomTatGiaDinh");
+
     </script>
   </body>
 </html>

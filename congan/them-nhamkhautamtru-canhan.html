@@ -65,6 +65,7 @@
   </head>
 
   <body>
+    <div id = "my-modal"></div>
     <div id="main">
       <!-- Vertical navbar -->
       <div class="vertical-nav bg-white" id="sidebar">
@@ -72,15 +73,16 @@
           <div class="media d-flex align-items-center">
             <img
               loading="lazy"
-              src="https://res.cloudinary.com/lap-trinh-java/image/upload/v1651408170/hx1ryis9l2eyzqq8zis2.jpg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNRKKg70Q7bzM9SRtfVmMyk-1n_UcVdqrbdQ&usqp=CAU"
               alt="..."
               width="80"
               height="80"
+              style="object-fit: cover;"
               class="mr-3 rounded-circle shadow-sm"
             />
             <div class="media-body">
-              <h4 class="m-0">Olivia</h4>
-              <p class="font-weight-normal text-muted mb-0">Web developer</p>
+              <h4 class="m-0">UBND</h4>
+              <p class="font-weight-normal text-muted mb-0">Hải Châu</p>
             </div>
           </div>
         </div>
@@ -88,7 +90,7 @@
         <p
           class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0"
         >
-          Dashboard
+          Công An
         </p>
 
         <ul class="nav flex-column bg-white mb-0">
@@ -121,49 +123,37 @@
               </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
+            <a  href="#bieumau" class="nav-link text-dark" data-toggle="collapse"
+            >
+              <i class="fa fa-paperclip mr-3 text-primary fa-fw"></i>
+              Biểu mẫu
+            </a>
+            <ul class="collapse list-unstyled sidebarContent" id="bieumau">
+                <li><a href="#">Danh sách đăng ký thường trú</a></li>
+                <li><a href="#">Danh sách đăng ký tạm trú</a></li>
+                <li><a href="#">Khác</a></li>
+              </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#thongke" class="nav-link text-dark" data-toggle="collapse">
               <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-              services
+                Thống Kê
             </a>
+            <ul class="collapse list-unstyled sidebarContent" id="thongke">
+              <li><a href="#">Thống Kê 1</a></li>
+              <li><a href="#">Thống Kê 2</a></li>
+              <li><a href="#">Thống Kê 3</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
+            <a href="#taikhoan" class="nav-link text-dark" data-toggle="collapse">
               <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
-              Gallery
+              Tài Khoản
             </a>
-          </li>
-        </ul>
-
-        <p
-          class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0"
-        >
-          Charts
-        </p>
-
-        <ul class="nav flex-column bg-white mb-0">
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
-              <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
-              area charts
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
-              <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
-              bar charts
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
-              <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
-              pie charts
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
-              <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
-              line charts
-            </a>
+            <ul class="collapse list-unstyled sidebarContent" id="taikhoan">
+              <li><a href="#">Thông tin tài khoản</a></li>
+              <li><a href="#">Đổi mật khẩu</a></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -234,6 +224,9 @@
                             name="name"
                             value=""
                             class="form-control"
+                            data-toggle="modal"
+                            data-target="#exampleModal"
+                            modal-form
                           />
                         </div>
                       </div>
@@ -321,6 +314,9 @@
                         name="name"
                         value=""
                         class="form-control"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                        modal-form
                       />
                     </div>
                   </div>
@@ -364,6 +360,9 @@
                         name="name"
                         value=""
                         class="form-control"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                        modal-form
                       />
                     </div>
                   </div>
@@ -450,7 +449,8 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-
+    <script src="./js/modal-form.js"></script>
+    <script type="module" src="./js/address-form.js"></script>
     <script>
       $(function () {
         $("#sidebarCollapse").on("click", function () {
